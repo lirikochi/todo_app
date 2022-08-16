@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="application.js"></script>
+    <title>My to do list</title>
+</head>
+<body>
+    <div class="todo">
+        <h1>My to-do list fot today</h1>
+        <div class="todo__input">
+            <input type="text" class="todo__rext" placeholder="What do you want to do today?">
+            <input type="submit" class="todo__submit" value="Add new task">
+        </div>
+
+        <div class="buttons">
+            <button class="buttons__delete">Delete all</button>
+            <button class="buttons__showall">Show All</button>
+            <button class="buttons__complete">Show completed</button>
+        </div>
+
+        <li class="todo__items" data-todo-state="active">
+            
+            <span class="todo__task">Task</span>
+            <span class="todo__action todo__action-restore" data-todo-action="active"></span>
+        </li>
+    </div>
+</body>
+</html>
