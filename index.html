@@ -4,29 +4,25 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Todo List</title>
     <link rel="stylesheet" href="style.css">
-    <script src="application.js"></script>
-    <title>My to do list</title>
 </head>
 <body>
+    <h1>My ToDo List</h1>
     <div class="todo">
-        <h1>My to-do list fot today</h1>
-        <div class="todo__input">
-            <input type="text" class="todo__rext" placeholder="What do you want to do today?">
-            <input type="submit" class="todo__submit" value="Add new task">
+        <div class="todo__add">
+            <div class="todo__input">
+                <input type="text" id="todo__description" placeholder="What do you want to do today?">
+            </div>
+            <div class="buttons">
+                <button id = "addtask__button">Add Task</button>
+            </div>
         </div>
-
-        <div class="buttons">
-            <button class="buttons__delete">Delete all</button>
-            <button class="buttons__showall">Show All</button>
-            <button class="buttons__complete">Show completed</button>
-        </div>
-
-        <li class="todo__items" data-todo-state="active">
+        <h2>Today's Tasks</h2>
+        <div class="todo__list">
             
-            <span class="todo__task">Task</span>
-            <span class="todo__action todo__action-restore" data-todo-action="active"></span>
-        </li>
+        </div>
     </div>
+    <script src="index.js"></script>
 </body>
 </html>
