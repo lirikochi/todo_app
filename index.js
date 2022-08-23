@@ -25,9 +25,16 @@ const createTemplate = (task, index) => {
     `
 }
 
+const filterTasks = () => {
+    const activeTasks = tasks.lenght && tasks.filter(item => item.completed == false);
+    const completeTasks = tasks.lenght && tasks.filter(item => item.completed == true);
+    tasks = [...activeTasks,...completeTasks];
+}
+
 const taskTemplate = () => {
     todoList.innerHTML = "";
     if (tasks.length > 0) {
+        filterTasks();
         tasks.forEach((item, index) => {
             todoList.innerHTML += createTemplate(item, index);
         });
@@ -60,6 +67,7 @@ addTaskBtn.addEventListener('click', () => {
 })
 
 const deleteTask = index => {
+    todoItemELems[index].classlist.add('delition');
     setTimeout(() => {
     tasks.splice(index, 1);
     updateLocal();
